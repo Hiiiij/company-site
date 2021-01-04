@@ -1,4 +1,5 @@
 import ButtonPrimary from "../Components/ButtonPrimary"
+
 function Recruiting() {
     return (
       <div>
@@ -8,6 +9,5 @@ function Recruiting() {
       </div>   
     )
   }
-      
       
   export default Recruiting;

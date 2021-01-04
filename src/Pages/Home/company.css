@@ -18,5 +18,48 @@
 }
 
 .team {
+    display: flex;
+    flex-direction: column;
+    
+}
+@media only screen and (min-width: 600px) {
+    .team {
+        text-align: center;
+        justify-content: center;
+       
+    }
+    .team > p {
+        max-width: 720px;
+        margin: 0 auto;
+    }
+}
 
+.team-members > ul {
+    text-align: center;
+    text-align: left;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+@media only screen and (min-width: 600px) {
+    .team-members > ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .team-members > ul > li {
+        width: 30%;
+    }
+}
+
+.with-background {
+    background-image: url("../../Assets/map.svg");
+    background-repeat: no-repeat;
+    background-position: right center;
+    
+}
+.working {
+    max-width: 484px;
+    padding: 50px 0;
 }

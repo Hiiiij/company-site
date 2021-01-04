@@ -1,5 +1,6 @@
 import projects from "../Assets/projects.jpg"
 import ButtonPrimary from "../Components/ButtonPrimary"
+
 function Projects() {
   return (
     <div>
