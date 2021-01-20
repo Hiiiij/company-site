@@ -1,6 +1,6 @@
 
 import shopify_ecommerce from '../Assets/shopify_ecommerce.jpg'
-import ButtonPrimary from "../Components/ButtonPrimary"
+import { ButtonPrimary } from "../Primitives/Button/ButtonPrimary"
 
 
 function ECommerceShop() {

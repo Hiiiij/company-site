@@ -9,8 +9,10 @@ import Engineering from './Engineering'
 import Recruiting from './Recruiting'
 import ECommerceShop from './ECommerceShop'
 import Testimonials from './Testimonials'
-// import ExtrenalITDepartment from './ ExtrenalITDepartment'
+// import ExtrenalITDepartment from './ExtrenalITDepartment'
 
+import { homeCardSections } from '../dummydata/CardSectionsData';
+import CardSection from '../Components/CardSection';
 
 function Home() {
   return (
@@ -45,14 +47,28 @@ function Home() {
         </li>
       </ul>
       <Projects />
+      {
+        homeCardSections.map(({ title, text, imgUrl, buttonText, hasWave }, index) => (
+          <CardSection
+            key={title}
+            cardTitle={title}
+            cardText={text}
+            cardImgUrl={imgUrl}
+            buttonText={buttonText}
+            isReversed={index % 2 !== 0}
+          >
+            {hasWave && 'Potato'}
+          </CardSection>
+        ))
+      }
+      {/* <Projects />
       <Engineering />
       <Recruiting />
       <ECommerceShop />
-      <Testimonials />
+      <Testimonials /> */}
     </div>
 
   )
 }
-
 
 export default Home;

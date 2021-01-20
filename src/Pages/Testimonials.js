@@ -1,4 +1,4 @@
-import ButtonPrimary from "../Components/ButtonPrimary"
+import { ButtonPrimary } from "../Primitives/Button/ButtonPrimary"
 function Testimonials() {
     return (
         <div>

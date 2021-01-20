@@ -2,7 +2,7 @@ import './App.css';
 import React from "react";
 import Header from "./Components/Header"
 import Home from './Pages/Home'
-import Company from './Pages/Home/Company'
+import Company from './Pages/Company/Company'
 import Recruiting from './Pages/Recruiting'
 import Engineering from './Pages/Engineering'
 import Projects from './Pages/Projects'
@@ -33,27 +33,27 @@ export default function App() {
             <Recruiting />
           </Route>
           <Route path="/engineering">
-            <Engineering />        
+            <Engineering />
           </Route>
           <Route exact path="/engineering/externalITDepartment">
-            <ExternalITDepartment/>
+            <ExternalITDepartment />
           </Route>
           <Route path="/engineering/software">
-            <SoftwareDevelopment/>
-          </Route>   
+            <SoftwareDevelopment />
+          </Route>
           <Route path="/engineering/ecommerce">
-            <ECommerceShop/>
-          </Route> 
+            <ECommerceShop />
+          </Route>
           <Route path="/engineering/it">
             <RPA />
-          </Route> 
+          </Route>
           <Route path="/rpa">
-            <RPA /> 
-           </Route> 
+            <RPA />
+          </Route>
           <Route path="/company">
             <Company />
           </Route>
-  
+
         </Switch>
 
       </div>

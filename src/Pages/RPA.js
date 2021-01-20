@@ -5,6 +5,6 @@ function RPA() {
     </div>
   );
 }
-    
-    
-export default RPA ;
+
+
+export default RPA;

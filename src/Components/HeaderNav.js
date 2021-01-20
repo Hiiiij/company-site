@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
-import ButtonPrimary from "./ButtonPrimary"
+import { ButtonPrimary } from "../Primitives/Button/ButtonPrimary"
 
 const HeaderNav = () => {
-    return( 
-      <>
-        <ul>
+  return (
+    <>
+      <ul>
         <li>
           <Link to="/">Home</Link>
         </li>
@@ -14,7 +14,7 @@ const HeaderNav = () => {
         <li>
           <Link to="/engineering">Engineering</Link>
           <ul>
-            <li><Link  to="/engineering/externalITDepartment">External IT Department</Link></li>
+            <li><Link to="/engineering/externalITDepartment">External IT Department</Link></li>
           </ul>
 
         </li>
@@ -25,9 +25,9 @@ const HeaderNav = () => {
           <Link to="/company">Company</Link>
         </li>
       </ul>
-      <ButtonPrimary>Contact</ButtonPrimary> 
-      </>
-    )
+      <ButtonPrimary>Contact</ButtonPrimary>
+    </>
+  )
 }
 
 export default HeaderNav

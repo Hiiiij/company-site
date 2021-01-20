@@ -1,5 +1,5 @@
 import projects from "../Assets/projects.jpg"
-import ButtonPrimary from "../Components/ButtonPrimary"
+import { ButtonPrimary } from "../Primitives/Button/ButtonPrimary"
 
 function Projects() {
   return (
