@@ -20,6 +20,7 @@ import {
 export default function App() {
   return (
     <Router>
+      <div className="main-container"> 
       <Header />
       <div>
         <Switch>
@@ -56,6 +57,7 @@ export default function App() {
 
         </Switch>
 
+      </div>
       </div>
     </Router>
   )

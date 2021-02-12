@@ -8,11 +8,12 @@ import Projects from "./Projects"
 import Engineering from './Engineering'
 import Recruiting from './Recruiting'
 import ECommerceShop from './ECommerceShop'
-import Testimonials from './Testimonials'
+import Testimonials from '../Components/Testimonial/Testimonials'
 // import ExtrenalITDepartment from './ExtrenalITDepartment'
 
 import { homeCardSections } from '../dummydata/CardSectionsData';
 import CardSection from '../Components/CardSection';
+import ContactForm from '../Components/ContactForm';
 
 function Home() {
   return (
@@ -64,8 +65,9 @@ function Home() {
       {/* <Projects />
       <Engineering />
       <Recruiting />
-      <ECommerceShop />
-      <Testimonials /> */}
+      <ECommerceShop /> */}
+      <Testimonials />
+      <ContactForm />
     </div>
 
   )
