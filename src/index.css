@@ -9,7 +9,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+textarea{
+ font-family: 'Montserrat', sans-serif !important;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -18,17 +20,42 @@ code {
 .main-container {
   width: 100vw;
   padding: 0 1rem;
-  /* margin: 0 auto; */
   overflow-x: hidden;
   overflow-y: auto;
 }
 
 .container{
-  width: 100%;
+  max-width: 1000px;
   padding: 0 1rem;
-  margin: 0 auto
+  margin: 0 auto;
 }
 
 .txt-highlight {
   color: #ff0000
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 62px;
+  line-height: 75.58px;
+}
+
+h2 {
+  font-size: 48px;
+line-height: 59px;
+}
+
+h3 {
+  font-size: 22px;
+line-height: 27px;
+}
+
+p {
+  font-size:22px;
+  line-height: 28.91px;
+  color: #808080;
+}
+
+a {
+  color: #ff0000;
 }

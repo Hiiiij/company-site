@@ -19,7 +19,7 @@
     display: flex;
     background-repeat: no-repeat;
     background-position: 0% 100%;
-    background-image: url("../Assets/dots.svg");
+    background-image: url("../../Assets/dots.svg");
 }
 
 .sub-txt {

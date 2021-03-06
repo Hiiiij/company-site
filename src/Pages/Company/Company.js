@@ -11,7 +11,7 @@ function Company() {
         <div>
           <img src="https://via.placeholder.com/192x155" className="img-max" alt="" />
         </div>
-      </div>
+       </div>
       <div className="chunk">
         <div>
           <img src="https://via.placeholder.com/494x513" className="img-max" alt="" />

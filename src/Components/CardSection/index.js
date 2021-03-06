@@ -3,26 +3,34 @@ import React from 'react';
 // import { Button } from '../../Primitives';
 import { ButtonPrimary } from "../../Primitives/Button/ButtonPrimary"
 import styled from '@emotion/styled';
-import { ImgFrame } from '../../Primitives/Img/Img'
+import { ImgFrame } from '../../Primitives/Img/Img';
+import nb1 from '../../Assets/recruitingPage/nb1.svg'
+import nb2 from '../../Assets/recruitingPage/nb2.svg'
+import nb3 from '../../Assets/recruitingPage/nb3.svg'
+import nb4 from '../../Assets/recruitingPage/nb4.svg'
+import nb5 from '../../Assets/recruitingPage/nb5.svg'
 
-const StyledSection = styled.section(props => ({
+const indexImgMap = [ nb1, nb2, nb3, nb4, nb5 ];
+
+const StyledSection = styled.section(({ isReversed, greyBg }) => ({
     display: 'flex',
     width: '100%',
     height: '100%',
-    backgroundColor: props.isReversed ? '#e3e3e3' : '#fff',
-    border: 'solid 1px ' + props.borderColor,
-    position: 'relative'
+    backgroundColor: greyBg ? '#e3e3e3' : '#fff',
+    position: 'relative',
+    flexDirection: isReversed && 'row-reverse'
 }))
 
-const LeftDiv = styled.div`
+const SectionText = styled.div`
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     padding: 0 2rem;
+    
 `;
 
-const RightDiv = styled.div`
+const SectionImage = styled.div`
     width: 100%;
     height: 100%;
 `;
@@ -32,22 +40,21 @@ const CardSection = ({
     cardImgUrl,
     buttonText,
     isReversed,
+    greyBg,
+    index,
     children
 }) => (
-    <StyledSection isReversed={isReversed} borderColor="pink">
-        {!isReversed && <LeftDiv>
+    <StyledSection isReversed={isReversed} greyBg={greyBg}>
+        
+        <SectionText>
             <h4>{cardTitle}</h4>
             <p>{cardText}</p>
             <ButtonPrimary type="primary">{buttonText}</ButtonPrimary>
-        </LeftDiv>}
-        <RightDiv>
+        </SectionText>
+        <SectionImage>
+            {(index || index === 0) && <img src={indexImgMap[index]} alt="section number" />}
             <ImgFrame src={cardImgUrl} alt="section" />
-        </RightDiv>
-        {isReversed && <LeftDiv>
-            <h4>{cardTitle}</h4>
-            <p>{cardText}</p>
-            <ButtonPrimary type="primary">{buttonText}</ButtonPrimary>
-        </LeftDiv>}
+        </SectionImage>
         <div style={{
             position: 'absolute', bottom: 0, left: '50%',
             textAlign: 'center', transform: 'translate(-50%, -100%)'

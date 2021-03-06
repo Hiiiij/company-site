@@ -1,5 +1,6 @@
-import software from '../Assets/software.jpg'
-import { ButtonPrimary } from "../Primitives/Button/ButtonPrimary"
+import software from '../../Assets/software.jpg'
+import { ButtonPrimary } from "../../Primitives/Button/ButtonPrimary"
+
 function Engineering() {
   return (
     <div>
