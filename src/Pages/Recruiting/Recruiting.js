@@ -8,20 +8,70 @@ import Testimonials from '../../Components/Testimonial/Testimonials'
 import job from '../../Assets/recruitingPage/jobIconsvg.svg'
 import Process from '../../Components/Process'
 import HeroCard from '../../Components/HeroCard';
+import { H1Text } from '../../Components/HeroCard/style'
 
 import AltTv from '../../Assets/AltTv.png'
 import laptopPic from '../../Assets/recruitingPage/recruitingPageProcess.png'
 import dots from '../../Assets/recruitingPage/dots.svg'
+import { TemplateCard } from '../../Components/TemplateCard';
+import { ContainerWithLayoutMargin } from '../../Components/StyledComponents'
 
 const TestimonialsWrapper = styled.div`
   display: flex;
 `
 
+const StyledImage = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+`
+
+const StyledImageContainer = styled.div`
+  position: relative;
+`
+
+const StyledImageText = styled.div`
+position: absolute;
+top: 0;
+color: #fff;
+left: var(--layout-margin);
+`
+const StyledParagraph = styled.p`
+  background:#000;
+  color: #fff;
+`
+const StyledHeader = styled.h2`
+  background:#000;
+  text-align: center;
+  width: 23rem;
+  height: 7.5rem;
+`
+
+const JobOpeningsWrapper = styled.section`
+  display: flex;
+  width: 100%;
+`
+
+const JobOpening = styled.div`
+display: flex;
+flex-direction: column;
+text-align: center;
+align-items:center;
+`
+
 function Recruiting() {
+
   return (
     <div className='container'>
       {/* need to remove hardcoded text and use same HeroCard for all pages */}
-      <HeroCard introImg={RecruitingImg} />
+      {/* <HeroCard introImg={RecruitingImg} renderHeader={<H1Text>Recruiting <br></br><span className="txt-highlight">the best talent</span> for your company></H1Text>} /> */}
+      <ContainerWithLayoutMargin>
+        <TemplateCard
+          description="We found out that getting engineers with advanced soft skills, to hire other engineers for companies is extremely efficient. So all our recruiters are knowledgeable in the fields they hire in. Engineers hire engineers, Designers hire other designers and so on."
+          img={laptopPic}
+          renderHeader={() => <h1>Recruiting <div className="txt-highlight">the best talent</div> for your company</h1>}
+        />
+      </ContainerWithLayoutMargin>
       {/* <img src={RecruitingImg} alt="" /> */}
       {/* <img src={Brands} alt="" /> */}
 
@@ -29,32 +79,41 @@ function Recruiting() {
       {/* <h1 className='txt-hero'>Recruiting
       the best talent for your company</h1>
       <h4 className='sub-txt'>We found out that getting engineers with advanced soft skills, to hire other engineers for companies is extremely efficient. So all our recruiters are knowledgeable in the fields they hire in. Engineers hire engineers, Designers hire other designers and so on.</h4> */}
-      <img src={laptopPic} alt="" />
-      <img src={dots} alt='' />
-      <h2>Invitation by Automation</h2>
-      <p>Our revolutionary automation
-     tool for recruiting</p>
-      <img src={AltTv} alt='' />
-     
-      <h2>Process</h2>
-      <p>In this process an expert recruits another expert. Meaning, for an engineer job opening, an engineer is responsible for recruiting candidates, who are also engineers</p>
-      <Process />
+      {/* <img src={laptopPic} alt="" /> */}
+      {/* <img src={dots} alt='' /> */}
+      <StyledImageContainer>
+        <StyledImage src={AltTv} alt='' />
+        <StyledImageText>
+          <StyledHeader>Invitation by Automation</StyledHeader>
+          <StyledParagraph>Our revolutionary automation
+     tool for recruiting</StyledParagraph>
+        </StyledImageText>
+      </StyledImageContainer>
+      <ContainerWithLayoutMargin>
+        <h2>Process</h2>
+        <p>In this process an expert recruits another expert. Meaning, for an engineer job opening, an engineer is responsible for recruiting candidates, who are also engineers</p>
+
+        <Process />
+      </ContainerWithLayoutMargin>
+
       <Testimonials />
-      <h2>Job Openings</h2>
-      <TestimonialsWrapper>
-        {Array(6).fill("").map((item, index) => {
-          return (
+      <ContainerWithLayoutMargin>
+        <h2 style={{ textAlign: 'center' }} >Job Openings</h2>
+        <JobOpeningsWrapper>
+          {Array(6).fill("").map((item, index) => {
+            return (
 
-            <div key={index}>
+              <JobOpening key={index}>
 
-              <img src={job} alt='' />
-              <strong>Senior Product Designer</strong>
-              <p>Facebook Berlin, Germany</p>
-            </div>
-          )
-        })}
+                <img style={{ width: '62px', height: '62px', objectFit: 'contain' }} src={job} alt='' />
+                <strong style={{ fontWeight: 'bold', fontSize: '1.375rem' }}>Senior Product Designer</strong>
+                <p style={{ fontSize: '1.375rem' }}>Facebook Berlin, Germany</p>
+              </JobOpening>
+            )
+          })}
+        </JobOpeningsWrapper>
+      </ContainerWithLayoutMargin>
 
-      </TestimonialsWrapper>
       <ContactForm />
 
     </div>

@@ -2,10 +2,10 @@
 import styled from '@emotion/styled'
 
 export const ButtonPrimary = styled.button(props => ({
-    height: '36px',
-    width: '10rem',
+    height: '3.25rem',
+    width: '16rem',
     borderRadius: '100px',
-    padding: '5px 20px',
+    padding: '12px 29px',
     fontFamily: 'inherit',
     fontWeight: '600',
     background: props.type === "tertiary" ? "#222" : 'transparent',
@@ -18,20 +18,3 @@ export const ButtonPrimary = styled.button(props => ({
     }
 }))
 
-/*.button - primary: hover {
-    background:#ff0000;
-    color: #fff;
-}
-
-    .button - secondary: hover {
-        border- color: #222;
-}
-
-.button - tertiary: hover {
-background:#fff;
-color: #222;
-}*/
-
-    // return (
-    //     <StyledButton type={type} className="button-primary"></StyledButton>
-    // )

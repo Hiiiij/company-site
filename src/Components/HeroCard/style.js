@@ -6,6 +6,21 @@ export const Container = styled.div`
     display: flex;
     background-repeat: no-repeat;
     background-position: 0% 100%;
-    background-image: url("../Assets/dots.svg");
     ${fadeIn};
 `;
+
+export const H1Text = styled.h1`
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 75.58px;
+    
+}
+`
+
+export const H2Text = styled.h2`
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 75.58px;
+}
+`
+

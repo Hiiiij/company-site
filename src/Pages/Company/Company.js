@@ -2,7 +2,7 @@ import "./company.css"
 
 function Company() {
   return (
-    <div className="container">
+    <div>
       <div className="chunk">
         <div>
           <h1>We’re software engineers and UX designers</h1>

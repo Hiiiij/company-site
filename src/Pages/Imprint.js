@@ -10,7 +10,7 @@ const H2 = styled.h2`
 `
 function Imprint() {
     return (
-        <div className="container">
+        <div>
             <h1>Imprint</h1>
             <H2>Diese Website wird von der Dzemo GmbH betrieben</H2>
             <Impresum>

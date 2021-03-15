@@ -31,7 +31,7 @@ const ErrorText = styled.div`
 
 
 const ErrorPage = () => (
-    <div className="container">
+    <div>
         <Container>
             <ErrorText>
                 <ErrorHeading>The page you were looking for was not found</ErrorHeading>

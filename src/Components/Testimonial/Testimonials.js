@@ -84,9 +84,11 @@ function Testimonials() {
                     ))}
                 </Slider>
                 <TestimonialsFooter>
-                    <ButtonBack className='arrow-back' onClick={() => setCurrSlide(currSlide - 1)}><img src={Arrow_left} alt=""/></ButtonBack>
-                    <ButtonPrimary type="primary">See testimonials →</ButtonPrimary>
-                    <ButtonNext className='arrow-forward' onClick={() => setCurrSlide(currSlide + 1)}><img src={Arrow_right} alt=""/></ButtonNext>
+                    <ButtonBack className='arrow-back' onClick={() => setCurrSlide(currSlide - 1)}><img src={Arrow_left} alt="" /></ButtonBack>
+                    <div style={{ margin: '24px' }}>
+                        <ButtonPrimary type="primary">See testimonials →</ButtonPrimary>
+                    </div>
+                    <ButtonNext className='arrow-forward' onClick={() => setCurrSlide(currSlide + 1)}><img src={Arrow_right} alt="" /></ButtonNext>
                 </TestimonialsFooter>
 
 

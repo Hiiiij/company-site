@@ -1,12 +1,10 @@
 import logo from "../../Assets/logo.svg"
 import { Link } from "react-router-dom";
+
+import {ContainerWithLayoutMargin} from "../StyledComponents"
 import Facebook from "../../Assets/facebook.svg";
 import Instagram from "../../Assets/instagram.svg";
 import Linkedin from "../../Assets/linkedin.svg";
-
-
-// import Xing from "../../Assets/xing-logo.svg";
-
 import styled from '@emotion/styled';
 
 const FooterLinks = styled.ul`
@@ -28,22 +26,24 @@ margin-left: .5rem;
 const TopFooter = styled.div`
 display:flex;
 justify-content:space-between;
+
 `
 
 const FooterRight = styled.div`
 display: flex;
 `
 
+
 const Footer = () => {
     return (
-        <div className="container">
+        <ContainerWithLayoutMargin>
             <TopFooter>
                 <div>
                     <Link to="/"><img src={logo} alt="" /></Link>
-                    <p>Wicherstr. 52,<br/>10439 Berlin, Germany</p>
+                    <p>Wicherstr. 52,<br />10439 Berlin, Germany</p>
                 </div>
-                
-               <FooterRight>  
+
+                <FooterRight>
                     <div>
                         <h4>Contact</h4>
                         <FooterLinks>
@@ -52,11 +52,11 @@ const Footer = () => {
                             <li><a href="">Contact us</a></li>
                         </FooterLinks>
                     </div>
-                        
+
                     <div>
                         <h4>Company</h4>
                         <FooterLinks>
-                       
+
                             <li>
                                 <Link to="/">Home</Link>
                             </li>
@@ -70,8 +70,8 @@ const Footer = () => {
                                 <Link to="/company">Company</Link>
                             </li>
                         </FooterLinks>
-                        </div>
-                    
+                    </div>
+
 
                     <div>
                         <h4>Pages</h4>
@@ -81,17 +81,17 @@ const Footer = () => {
                                 <Link to="/testimonials">Testimonials</Link>
                             </li>
                             <li>
-                             <Link to="/imprint">Imprint</Link>
+                                <Link to="/imprint">Imprint</Link>
                             </li>
                             <li>
-                            <Link to="/projects">Projects</Link>
+                                <Link to="/projects">Projects</Link>
                             </li>
                         </FooterLinks>
                     </div>
                 </FooterRight>
 
-         </TopFooter>
-            <hr/>
+            </TopFooter>
+            <hr />
             <BottomFooter>
                 <p>&copy; 2020</p>
                 <SocialLinks>
@@ -101,7 +101,7 @@ const Footer = () => {
                     <SocialIcons><img src={Linkedin} /></SocialIcons>
                 </SocialLinks>
             </BottomFooter>
-        </div>
+        </ContainerWithLayoutMargin>
     )
 }
 

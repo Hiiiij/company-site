@@ -2,7 +2,18 @@ import software from '../Assets/software.jpg'
 import recruitment from '../Assets/it_recruitment.jpg'
 import shopify from '../Assets/shopify_ecommerce.jpg'
 
+
+export const homeCardHeroData = {
+    header: {
+        highlight: "Realize your vision with our",
+        afterHighlight: "state-of-the-art software engineering"
+    },
+    description: "Building ultra modern software is one of our core values. We have a balanced team of engineers with 20 years of experience and younger engineers affine to the newest technologies like React and Node.js",
+    img: recruitment,
+};
+
 export const homeCardSections = [
+    
     {
         title: "Engineering",
         text: "We build state-of-the-art software for different companies, suitable to their needs and budget. Customer satisfaction and optimal user experience is at the forefront of all our decisions.",
@@ -22,6 +33,7 @@ export const homeCardSections = [
         text: "Shopify is our go-to e-commerce system to build small online stores. This is a great solution for a business which starts small and begins to scale. On reaching the limits of Shopify we provide other solutions.",
         imgUrl: shopify,
         buttonText: "Learn more →",
-        hasWave: false`
+        hasWave: false
     }
 ]
+
