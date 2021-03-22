@@ -12,7 +12,7 @@ export const CarouselCardWrapper = styled.div`
     padding-bottom: 33px;
     text-align: left;
     background-color:#fff;
-
+    margin: 0 20px;
 `
 export const CardWrapper = styled.div`
     display:flex;

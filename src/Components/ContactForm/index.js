@@ -6,7 +6,7 @@ import Sent from '../../Assets/recruitingPage/sent.svg';
 export const contactFormUtils = () => {
 
 }
-const ContactForm = () => {
+export const ContactForm = () => {
   const { register, handleSubmit, watch, errors } = useForm();
   const onSubmit = data => {
     // TODO: Replace form with success message
@@ -22,9 +22,9 @@ const ContactForm = () => {
     <div>
       {isSent
         ? <ContactUsSection>
-            <ContactUsHeader> Your message has been sent</ContactUsHeader>
-            <img src={Sent} alt="Sent animation" />
-          </ContactUsSection>
+          <ContactUsHeader> Your message has been sent</ContactUsHeader>
+          <img src={Sent} alt="Sent animation" />
+        </ContactUsSection>
         : <ContactUsSection>
           <ContactUsHeader>Contact Us</ContactUsHeader>
           <ContactUsForm onSubmit={handleSubmit(onSubmit)} novalidate>
@@ -56,5 +56,3 @@ const ContactForm = () => {
     </div>
   );
 };
-
-export default ContactForm;

@@ -3,11 +3,12 @@ import styled from '@emotion/styled';
 
 import RecruitingImg from '../../Assets/Recruiting.png'
 import Brands from '../../Assets/brands.png'
-import ContactForm from '../../Components/ContactForm'
+import { ContactForm } from '../../Components/ContactForm'
 import Testimonials from '../../Components/Testimonial/Testimonials'
 import job from '../../Assets/recruitingPage/jobIconsvg.svg'
 import Process from '../../Components/Process'
-import HeroCard from '../../Components/HeroCard';
+// import HeroCard from '../../Components/HeroCard';
+
 import { H1Text } from '../../Components/HeroCard/style'
 
 import AltTv from '../../Assets/AltTv.png'
@@ -63,13 +64,13 @@ function Recruiting() {
 
   return (
     <div className='container'>
-      {/* need to remove hardcoded text and use same HeroCard for all pages */}
-      {/* <HeroCard introImg={RecruitingImg} renderHeader={<H1Text>Recruiting <br></br><span className="txt-highlight">the best talent</span> for your company></H1Text>} /> */}
+
       <ContainerWithLayoutMargin>
         <TemplateCard
+          noBorder
           description="We found out that getting engineers with advanced soft skills, to hire other engineers for companies is extremely efficient. So all our recruiters are knowledgeable in the fields they hire in. Engineers hire engineers, Designers hire other designers and so on."
           img={laptopPic}
-          renderHeader={() => <h1>Recruiting <div className="txt-highlight">the best talent</div> for your company</h1>}
+          renderHeader={() => <H1Text>Recruiting <div className="txt-highlight">the best talent</div> for your company</H1Text>}
         />
       </ContainerWithLayoutMargin>
       {/* <img src={RecruitingImg} alt="" /> */}

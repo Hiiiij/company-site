@@ -1,4 +1,4 @@
-import ContactUsSection from "../../Components/ContactForm";
+import { ContactForm } from "../../Components/ContactForm";
 import MainPic from "../../Assets/Engineering/MainPic.svg"
 import CardSection from '../../Components/CardSection';
 import Testimonials from '../../Components/Testimonial/Testimonials.js'
@@ -6,17 +6,13 @@ import { TemplateCard } from "../../Components/TemplateCard";
 import { H1Text } from "../../Components/HeroCard/style";
 import Dots from '../../Assets/Engineering/dotsExternalIt.svg'
 import styled from '@emotion/styled'
+import { ContainerWithLayoutPadding } from "../../Components/StyledComponents";
 
 const DotsContainer = styled.div`
 display:flex;
 justify-content:center;
 background: #f1f1f1
 `
-
-const imageHeroStyles = {
-  alignItems: 'flex-start',
-  paddingTop: '60px'
-}
 
 const engineeringSections = [
   {
@@ -57,33 +53,35 @@ const engineeringSections = [
 
 function ExternalITDepartment() {
   const [header, ...card] = engineeringSections
+
   return (
     <>
-      <TemplateCard
-        noBorder
-        img={header.img}
-        renderLeftSideExtras={() => header.hasButton && <p>insert  button here</p>}
-        renderRightSideExtras={() => header.hasWave && <p> Insert wave here</p>}
-        renderHeader={() => <H1Text>{header.header.beforeHighlight} <div className="txt-highlight">{header.header.highlight}</div><br />{header.header.afterHighlight}</H1Text>}
-        description={header.description}
-        imgWrapperStyles={imageHeroStyles}
-      />
-      {card.map(({ title, text, imgUrl }, index) => (
-        <CardSection
-          smallIcons
-          key={title}
-          cardTitle={title}
-          cardText={text}
-          cardImgUrl={imgUrl}
-          isReversed={index % 2 !== 0}
-          greyBg={index % 2 === 0}
+      <ContainerWithLayoutPadding>
+        <TemplateCard
+          noBorder
+          img={header.img}
+          renderLeftSideExtras={() => header.hasButton && <p>insert  button here</p>}
+          renderRightSideExtras={() => header.hasWave && <p> Insert wave here</p>}
+          renderHeader={() => <H1Text>{header.header.beforeHighlight} <div className="txt-highlight">{header.header.highlight}</div>{header.header.afterHighlight}</H1Text>}
+          description={header.description}
         />
-      ))}
-      <DotsContainer>
-        <img src={Dots} alt='' />
-      </DotsContainer>
-      <Testimonials />
-      <ContactUsSection />
+        {card.map(({ title, text, imgUrl }, index) => (
+          <CardSection
+            smallIcons
+            key={title}
+            cardTitle={title}
+            cardText={text}
+            cardImgUrl={imgUrl}
+            isReversed={index % 2 !== 0}
+            greyBg={index % 2 === 0}
+          />
+        ))}
+        <DotsContainer>
+          <img src={Dots} alt='' />
+        </DotsContainer>
+        <Testimonials />
+        <ContactForm />
+      </ContainerWithLayoutPadding>
     </>
   );
 }

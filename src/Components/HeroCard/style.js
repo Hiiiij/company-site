@@ -13,7 +13,9 @@ export const H1Text = styled.h1`
     font-size: 3rem;
     font-weight: bold;
     line-height: 75.58px;
-    
+    margin: 0;
+    padding: 0;
+
 }
 `
 

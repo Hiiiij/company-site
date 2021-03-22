@@ -45,6 +45,14 @@ code {
   color: #ff0000;
 }
 
+h1,
+h2,
+h3,
+p {
+  margin: 0px;
+  padding: 0px;
+}
+
 /* h1 {
   font-weight: 700;
   font-size: 62px;
@@ -69,4 +77,8 @@ p {
 
 a {
   color: #ff0000;
+}
+
+* {
+  box-sizing: border-box;
 }

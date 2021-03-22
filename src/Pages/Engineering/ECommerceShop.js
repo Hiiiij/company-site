@@ -1,16 +1,40 @@
 
-import shopify_ecommerce from '../../Assets/shopify_ecommerce.jpg'
-import { ButtonPrimary } from "../../Primitives/Button/ButtonPrimary"
+import ShopifyEcommerce from '../../Assets/shopify_ecommerce.jpg'
+import { ContactForm } from '../../Components/ContactForm';
+import { H1Text } from '../../Components/HeroCard/style';
+import { TemplateCard } from '../../Components/TemplateCard';
+import Testimonials from '../../Components/Testimonial/Testimonials';
 
+const softwareDevEngineeringData = {
+    header: {
+        beforeHighlight: "Ecommerce Shop",
+        highlight: "Implementation"
+    },
+    description: 'One of our specialities is developing online stores with Shopify. Though we can also develop more complex enterprise shops using suitable frameworks and microservices, we advice  startups with a lean budget to start with Shopify and scale it up, until more complex software is needed.',
+    img: ShopifyEcommerce
+}
 
 function ECommerceShop() {
     return (
-        <div>
-            <h1>Shopify e-commerce</h1>
-            <p>Shopify is our go-to e-commerce system to build small online stores. This is a great solution for a business which starts small and begins to scale. On reaching the limits of Shopify we provide other solutions.</p>
-            <img src={shopify_ecommerce} alt="" />
-            <ButtonPrimary>See case →</ButtonPrimary>
-        </div>
+        <>
+            <TemplateCard
+                noBorder
+                renderHeader={() => {
+                    return <H1Text>
+                        {softwareDevEngineeringData.header.beforeHighlight}
+                        <span className="txt-highlight">{softwareDevEngineeringData.header.highlight}</span>
+                    </H1Text>
+                }
+                }
+                description={softwareDevEngineeringData.description}
+                img={softwareDevEngineeringData.img}
+            >
+                <div>Another child</div>
+                <div>Logos</div>
+            </TemplateCard>
+            <Testimonials />
+            <ContactForm />
+        </>
     );
 }
 

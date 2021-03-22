@@ -73,8 +73,8 @@ function Testimonials() {
                         <Slide key={index}
                             style={{
                                 // margin: '0 20px !important',
-                                transform: (index === currSlide && 'translateX(-30%)') ||
-                                    (index === currSlide + 2 && 'translateX(30%)'),
+                                // transform: (index === currSlide && 'translateX(-30%)') ||
+                                //     (index === currSlide + 2 && 'translateX(30%)'),
                                 // transform: 'translateX(5%)',
                                 // padding: '0 21px 0 36px',
 
