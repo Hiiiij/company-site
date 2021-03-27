@@ -1,4 +1,4 @@
-import { TemplateCard } from "../../Components/TemplateCard";
+import { HeroCard } from "../../Components/HeroCard/HeroCard";
 // import Testimonial from "../../Components/Testimonial/Testimonials";
 import Software from '../../Assets/Engineering/softwareDev.svg'
 import { H1Text, H2Text } from "../../Components/HeroCard/style";
@@ -6,7 +6,7 @@ import Testimonials from "../../Components/Testimonial/Testimonials";
 import { CardGrid } from "./CardGrid";
 import Neu from '../../Assets/projects.jpg';
 import Dots from '../../Assets/dotsSoftwareDev.svg';
-import {ContainerWithLayoutMargin} from '../../Components/StyledComponents'
+import { ContainerWithLayoutMargin } from '../../Components/StyledComponents'
 
 const softwareDevEngineeringData = {
   header: {
@@ -46,7 +46,7 @@ function SoftwareDevelopment() {
   return (
     <>
       <ContainerWithLayoutMargin>
-        <TemplateCard
+        <HeroCard
           noBorder
           description={softwareDevEngineeringData.description}
           img={softwareDevEngineeringData.img}
@@ -63,9 +63,9 @@ function SoftwareDevelopment() {
         />
 
       </ContainerWithLayoutMargin>
-      
-      <CardGrid projectCardData={projectCardData}/>
-     
+
+      <CardGrid projectCardData={projectCardData} />
+
       <Testimonials />
     </>
   );

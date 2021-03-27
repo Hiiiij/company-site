@@ -4,7 +4,7 @@ import cardData from '../../dummydata/engineeringCardSection';
 import Testimonials from '../../Components/Testimonial/Testimonials';
 import { ContactForm } from '../../Components/ContactForm';
 import CardSection from '../../Components/CardSection';
-import { TemplateCard } from "../../Components/TemplateCard";
+import { HeroCard } from "../../Components/HeroCard/HeroCard";
 import { H1Text } from "../../Components/HeroCard/style";
 import Wave from '../../Assets/Engineering/wave.svg'
 import { ContainerWithLayoutPadding } from '../../Components/StyledComponents';
@@ -20,7 +20,7 @@ const Engineering = () => {
     return (
         <>
             <ContainerWithLayoutPadding>
-                <TemplateCard
+                <HeroCard
                     noBorder
                     img={header.img}
                     renderHeader={() => <H1Text>{header.header.beforeHighlight} <div className="txt-highlight">{header.header.highlight}</div><br />{header.header.afterHighlight}</H1Text>}

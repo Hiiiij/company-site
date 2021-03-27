@@ -2,7 +2,7 @@
 import ShopifyEcommerce from '../../Assets/shopify_ecommerce.jpg'
 import { ContactForm } from '../../Components/ContactForm';
 import { H1Text } from '../../Components/HeroCard/style';
-import { TemplateCard } from '../../Components/TemplateCard';
+import { HeroCard } from '../../Components/HeroCard/HeroCard';
 import Testimonials from '../../Components/Testimonial/Testimonials';
 
 const softwareDevEngineeringData = {
@@ -17,7 +17,7 @@ const softwareDevEngineeringData = {
 function ECommerceShop() {
     return (
         <>
-            <TemplateCard
+            <HeroCard
                 noBorder
                 renderHeader={() => {
                     return <H1Text>
@@ -31,7 +31,7 @@ function ECommerceShop() {
             >
                 <div>Another child</div>
                 <div>Logos</div>
-            </TemplateCard>
+            </HeroCard>
             <Testimonials />
             <ContactForm />
         </>

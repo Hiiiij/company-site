@@ -10,7 +10,7 @@ import { homeCardSections } from '../../dummydata/CardSectionsData';
 import CardSection from '../../Components/CardSection';
 import "./home.css"
 import { ContainerWithLayoutMargin } from '../../Components/StyledComponents'
-import { TemplateCard } from '../../Components/TemplateCard';
+import { HeroCard } from '../../Components/HeroCard/HeroCard';
 import styled from '@emotion/styled'
 // import SoftwareDev from '../../Assets/Engineering/softwareDev.svg';
 const FlexIconsWrapper = styled.div`
@@ -38,7 +38,7 @@ function Home() {
   return (
     <div>
       <ContainerWithLayoutMargin>
-        <TemplateCard
+        <HeroCard
           noBorder
           img={introImg}
           description="Our recruiting concept is revolutionary in that we have engineers recruiting engineers for you - designers recruiting designers, product experts recruiting other product people. We found out that experts in a field can spot another expert faster than regular recruiting by pshycology and business majors. Our project case studies are living proof."

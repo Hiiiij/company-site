@@ -3,7 +3,7 @@ import React from 'react'
 import styled from '@emotion/styled'
 import { jsx } from '@emotion/react'
 import { cx, } from '@emotion/css'
-import { ContainerWithLayoutPadding } from './StyledComponents';
+import { ContainerWithLayoutPadding } from '../StyledComponents';
 
 const InternalComponentStyles = styled.div`
     display: flex;
@@ -36,7 +36,7 @@ const TextWrapper = styled.div`
   width: 100%;
 `;
 
-export function TemplateCard({
+export function HeroCard({
   noBorder,
   renderLeftSideExtras,
   renderRightSideExtras,

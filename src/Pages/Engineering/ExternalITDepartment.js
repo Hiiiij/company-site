@@ -2,7 +2,7 @@ import { ContactForm } from "../../Components/ContactForm";
 import MainPic from "../../Assets/Engineering/MainPic.svg"
 import CardSection from '../../Components/CardSection';
 import Testimonials from '../../Components/Testimonial/Testimonials.js'
-import { TemplateCard } from "../../Components/TemplateCard";
+import { HeroCard } from "../../Components/HeroCard/HeroCard";
 import { H1Text } from "../../Components/HeroCard/style";
 import Dots from '../../Assets/Engineering/dotsExternalIt.svg'
 import styled from '@emotion/styled'
@@ -57,7 +57,7 @@ function ExternalITDepartment() {
   return (
     <>
       <ContainerWithLayoutPadding>
-        <TemplateCard
+        <HeroCard
           noBorder
           img={header.img}
           renderLeftSideExtras={() => header.hasButton && <p>insert  button here</p>}

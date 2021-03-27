@@ -7,14 +7,14 @@ import { ContactForm } from '../../Components/ContactForm'
 import Testimonials from '../../Components/Testimonial/Testimonials'
 import job from '../../Assets/recruitingPage/jobIconsvg.svg'
 import Process from '../../Components/Process'
-// import HeroCard from '../../Components/HeroCard';
+
 
 import { H1Text } from '../../Components/HeroCard/style'
 
 import AltTv from '../../Assets/AltTv.png'
 import laptopPic from '../../Assets/recruitingPage/recruitingPageProcess.png'
 import dots from '../../Assets/recruitingPage/dots.svg'
-import { TemplateCard } from '../../Components/TemplateCard';
+import { HeroCard } from '../../Components/HeroCard/HeroCard';
 import { ContainerWithLayoutMargin } from '../../Components/StyledComponents'
 
 const TestimonialsWrapper = styled.div`
@@ -66,7 +66,7 @@ function Recruiting() {
     <div className='container'>
 
       <ContainerWithLayoutMargin>
-        <TemplateCard
+        <HeroCard
           noBorder
           description="We found out that getting engineers with advanced soft skills, to hire other engineers for companies is extremely efficient. So all our recruiters are knowledgeable in the fields they hire in. Engineers hire engineers, Designers hire other designers and so on."
           img={laptopPic}
