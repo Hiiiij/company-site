@@ -9,7 +9,10 @@ const InternalComponentStyles = styled.div`
     display: flex;
     padding-top: 60px;
     width: 100%;
+    padding-bottom: 6.25rem;
 `;
+
+
 
 const ImgWrapper = styled.section`
   flex: 0 0 50%;

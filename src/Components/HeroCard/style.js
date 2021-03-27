@@ -15,14 +15,11 @@ export const H1Text = styled.h1`
     line-height: 75.58px;
     margin-bottom: 44px;
     padding: 0;
-
-}
 `
 
 export const H2Text = styled.h2`
     font-size: 3rem;
     font-weight: bold;
     line-height: 75.58px;
-}
 `
 

@@ -1,12 +1,23 @@
 # Dezmo Project
 
+## Saturday 27th March 
+
+### Homework
+
+[ ] contact us page  - Export all text, images and svgs
+[ ] company page - Export all text, images and svgs
+
+### What have we done in the session
+
+
+
 ## Monday 15th March
 
 ### Homework
 
 [x] upload images, and text for two engineers pages
 
-### What dis we do in the session
+### What did we do in the session
 
 `<HeroCard>` clean this up, used it only for headers
 
@@ -25,10 +36,10 @@ Maybe weekend, to be confirmed
 ### homework
 
 Projects page
-[ ] use `<HeroCard>` for header,
-[ ] upload dots
-[ ] create data structure array e.g. [ {imageURL: projects.jpg...., title: "Home24 Backend Engineering"}, {imageURL: projects.jpg...., title: "Home24 Backend Engineering"}]
-[ ] map over data structure to render
-[ ] apply grey background
-[ ] constrain width of content with `ContainerWithLayoutMargin`
-[ ] Render contact us page
+[x] use `<HeroCard>` for header,
+[x] upload dots
+[x] create data structure array e.g. [ {imageURL: projects.jpg...., title: "Home24 Backend Engineering"}, {imageURL: projects.jpg...., title: "Home24 Backend Engineering"}]
+[x] map over data structure to render
+[x] apply grey background
+[x] constrain width of content with `ContainerWithLayoutMargin`
+
