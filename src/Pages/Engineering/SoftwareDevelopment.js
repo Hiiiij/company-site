@@ -2,11 +2,11 @@ import { TemplateCard } from "../../Components/TemplateCard";
 // import Testimonial from "../../Components/Testimonial/Testimonials";
 import Software from '../../Assets/Engineering/softwareDev.svg'
 import { H1Text, H2Text } from "../../Components/HeroCard/style";
-import { ContainerWithLayoutPadding } from "../../Components/StyledComponents";
 import Testimonials from "../../Components/Testimonial/Testimonials";
 import { CardGrid } from "./CardGrid";
-import Neu from '../../Assets/projects.jpg'
-import Dots from '../../Assets/dotsSoftwareDev.svg'
+import Neu from '../../Assets/projects.jpg';
+import Dots from '../../Assets/dotsSoftwareDev.svg';
+import {ContainerWithLayoutMargin} from '../../Components/StyledComponents'
 
 const softwareDevEngineeringData = {
   header: {
@@ -39,13 +39,13 @@ const projectCardData = [{
 
 }, {
   img: Neu,
-  title: "Home24 Backend EngineeringPE"
+  title: "Home24 Backend Engineering"
 }]
 
 function SoftwareDevelopment() {
   return (
     <>
-      <ContainerWithLayoutPadding>
+      <ContainerWithLayoutMargin>
         <TemplateCard
           noBorder
           description={softwareDevEngineeringData.description}
@@ -62,9 +62,10 @@ function SoftwareDevelopment() {
           renderHeader={() => <H1Text>{softwareDevEngineeringData.header.beforeHighlight} <span className="txt-highlight">{softwareDevEngineeringData.header.highlight}</span></H1Text>}
         />
 
-      </ContainerWithLayoutPadding>
-      <CardGrid projectCardData={projectCardData} />
-
+      </ContainerWithLayoutMargin>
+      
+      <CardGrid projectCardData={projectCardData}/>
+     
       <Testimonials />
     </>
   );

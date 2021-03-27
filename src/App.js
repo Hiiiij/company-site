@@ -8,7 +8,7 @@ import Footer from './Components/Footer/Footer';
 import Projects from './Pages/Projects/Projects';
 import Recruiting from './Pages/Recruiting/Recruiting';
 import { lazy, Suspense } from 'react';
-import './App.css';
+
 
 // import Home from './Pages/Home/Home'
 // import Company from './Pages/Company/Company'

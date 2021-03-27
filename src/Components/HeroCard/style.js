@@ -10,7 +10,7 @@ export const Container = styled.div`
 `;
 
 export const H1Text = styled.h1`
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: bold;
     line-height: 75.58px;
     margin: 0;
@@ -20,7 +20,7 @@ export const H1Text = styled.h1`
 `
 
 export const H2Text = styled.h2`
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: bold;
     line-height: 75.58px;
 }

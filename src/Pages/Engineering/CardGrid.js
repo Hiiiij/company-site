@@ -1,33 +1,53 @@
 import React from 'react'
-import { ContainerWithLayoutPadding } from '../../Components/StyledComponents'
+import { ContainerWithLayoutMargin } from '../../Components/StyledComponents'
+import styled from '@emotion/styled'
 
+const ProjectTile = styled.p`
+color: white;
+font-size: 2rem;
+font-weight: bold;
+`
+const ProjectItem = styled.div`
+width: 100%;
+height: 100%;
+minWidth: 200px;
+`
+
+const ProjectImg = styled.img`
+margin-bottom:41px;
+margin-top:67px;
+width: 100%;
+`
+const Wrapper = styled.div`
+padding-top:67px;
+padding-bottom:67px;
+`
+const BlackBg = styled.div`
+background-color: #000;
+color: #fff;
+`
+const ProjectGrid = styled.div`
+display: grid;
+grid-template-columns: auto auto;
+gap: 50px;
+`
 
 export function CardGrid({ projectCardData }) {
     return (
-        <ContainerWithLayoutPadding style={{
-            backgroundColor: '#000',
-            color: "#fff"
-        }}>
-            <h2>Projects</h2>
-            <div style={{
-                display: 'grid',
-                gridTemplateColumns: 'auto auto',
-                gap: '50px',
-                width: '100%',
-                height: '100%'
-            }}>
-                {projectCardData.map((item, index) => (
-                    <div key={index} style={{
-                        width: '100%',
-                        height: '100%',
-                        minWidth: '200px',
-                        // width: '500px', height: '500px'
-                    }}>
-                        <img src={item.img} style={{ backgroundColor: 'pink', width: '100%' }} />
-                        <p>{item.title}</p>
-                    </div>
-                ))}
-            </div>
-        </ContainerWithLayoutPadding>
+        <BlackBg>
+            <ContainerWithLayoutMargin>
+                <Wrapper>
+                    <h2>Projects</h2>
+                    <ProjectGrid>
+                        {projectCardData.map((item, index) => (
+                           <ProjectItem key={index}> 
+                            <ProjectImg src={item.img} />
+                            <ProjectTile>{item.title}</ProjectTile>
+                            </ProjectItem>
+                        ))}
+                    </ProjectGrid>
+                </Wrapper>
+            </ContainerWithLayoutMargin>
+        </BlackBg>
     )
 }

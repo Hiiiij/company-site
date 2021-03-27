@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 
+
 :root {
   --layout-margin: 5rem;
 }
@@ -27,11 +28,10 @@ code {
 }
 
 .container {
-  /* max-width: 1000px; */
   width: 100vw;
   overflow-x: hidden;
   overflow-y: auto;
-  /* margin: 0 auto; */
+
 }
 
 .sub-txt {
@@ -53,32 +53,30 @@ p {
   padding: 0px;
 }
 
-/* h1 {
+ h1 {
   font-weight: 700;
-  font-size: 62px;
-  line-height: 75.58px;
-} */
+  font-size: 4rem;
+  line-height: 76px;
+} 
 
 h2 {
-  font-size: 2rem;
+  font-weight: 700;
+  font-size: 3rem;
   line-height: 59px;
 }
 
 h3 {
+  font-weight: 700;
   font-size: 22px;
   line-height: 27px;
 }
 
 p {
   font-size: 22px;
-  line-height: 28.91px;
+  line-height: 28px;
   color: #808080;
 }
 
 a {
   color: #ff0000;
-}
-
-* {
-  box-sizing: border-box;
 }
