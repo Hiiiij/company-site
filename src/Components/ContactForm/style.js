@@ -42,9 +42,6 @@ export const ContactUsHeader = styled.h2`
     padding-top: 2.5rem;
     font-weight: 700;
 `
-
-
-
 export const ContactUsBtn = styled.button`
     padding: 1rem 0;
     color: black;

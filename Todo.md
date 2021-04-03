@@ -1,18 +1,37 @@
-# Dezmo Project
+# Dzemo Project
 
 ## Saturday 27th March 
+
+### What have we done in the session
+
+- Removed `<TemplateCard />` and used `<HeroCard />` 
+- removed inline styles and used styled components
+- We added padding to `<HeroCard/>`
+
+## What did we learn
+
+- Pascal case, camel case and kebab case 
+https://winnercrespo.com/naming-conventions/#:~:text=Camel%2C%20pascal%2C%20kebab%20and%20snake,other%20structures%20in%20source%20code.
+- Don't leave comments in code
+- Cant have a number as a variable 
+- How to use css variables
+- find and replace in code base edit > replace in files Shift+Cmd+H
 
 ### Homework
 
 [ ] contact us page  - Export all text, images and svgs
 [ ] company page - Export all text, images and svgs
+[ ] Remove all commented code
+[ ] Remove files we don't use e.g. logo.svg
+[ ] add a css variable for grey and use primary colour
 
-### What have we done in the session
+https://www.npmjs.com/package/cleanup-create-react-app
 
-
+### Next session
+- Refactor some stuff
+- Next weekend, Saturday 7pm
 
 ## Monday 15th March
-
 ### Homework
 
 [x] upload images, and text for two engineers pages
@@ -30,7 +49,6 @@
 - Comments in code can cause confusion and clutter
 
 ## Next session
-
 Maybe weekend, to be confirmed
 
 ### homework
@@ -42,4 +60,6 @@ Projects page
 [x] map over data structure to render
 [x] apply grey background
 [x] constrain width of content with `ContainerWithLayoutMargin`
+
+
 

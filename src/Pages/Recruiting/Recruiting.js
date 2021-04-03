@@ -1,25 +1,14 @@
-/* eslint-disable */
 import styled from '@emotion/styled';
-
-import RecruitingImg from '../../Assets/Recruiting.png'
-import Brands from '../../Assets/brands.png'
 import { ContactForm } from '../../Components/ContactForm'
 import Testimonials from '../../Components/Testimonial/Testimonials'
 import job from '../../Assets/recruitingPage/jobIconsvg.svg'
 import Process from '../../Components/Process'
-
-
 import { H1Text } from '../../Components/HeroCard/style'
-
 import AltTv from '../../Assets/AltTv.png'
 import laptopPic from '../../Assets/recruitingPage/recruitingPageProcess.png'
-import dots from '../../Assets/recruitingPage/dots.svg'
 import { HeroCard } from '../../Components/HeroCard/HeroCard';
 import { ContainerWithLayoutMargin } from '../../Components/StyledComponents'
 
-const TestimonialsWrapper = styled.div`
-  display: flex;
-`
 
 const StyledImage = styled.img`
   width: 100%;
@@ -73,15 +62,7 @@ function Recruiting() {
           renderHeader={() => <H1Text>Recruiting <div className="txt-highlight">the best talent</div> for your company</H1Text>}
         />
       </ContainerWithLayoutMargin>
-      {/* <img src={RecruitingImg} alt="" /> */}
-      {/* <img src={Brands} alt="" /> */}
 
-
-      {/* <h1 className='txt-hero'>Recruiting
-      the best talent for your company</h1>
-      <h4 className='sub-txt'>We found out that getting engineers with advanced soft skills, to hire other engineers for companies is extremely efficient. So all our recruiters are knowledgeable in the fields they hire in. Engineers hire engineers, Designers hire other designers and so on.</h4> */}
-      {/* <img src={laptopPic} alt="" /> */}
-      {/* <img src={dots} alt='' /> */}
       <StyledImageContainer>
         <StyledImage src={AltTv} alt='' />
         <StyledImageText>

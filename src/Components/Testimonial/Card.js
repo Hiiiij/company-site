@@ -20,8 +20,6 @@ export const CardWrapper = styled.div`
     justify-content:flex-end;
     min-height: 250px
 `
-
-
 export const Img = styled.img`
    align-self: flex-start;
 `

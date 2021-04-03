@@ -9,16 +9,6 @@ import Projects from './Pages/Projects/Projects';
 import Recruiting from './Pages/Recruiting/Recruiting';
 import { lazy, Suspense } from 'react';
 
-
-// import Home from './Pages/Home/Home'
-// import Company from './Pages/Company/Company'
-// import Engineering from './Pages/Engineering/Engineering'
-// import ExternalITDe````partment from './Pages/Engineering/ExternalITDepartment'
-// import SoftwareDevelopment from './Pages/Engineering/SoftwareDevelopment'
-// import ECommerceShop from './Pages/Engineering/ECommerceShop'
-// import RPA from './Pages/Engineering/RPA'
-// import ErrorPage from "./Pages/ErrorPage"
-
 const Home = lazy(() => import(/* webpackChunkName: "HomeChunk" */ './Pages/Home/Home'))
 const Company = lazy(() => import(/* webpackChunkName: "Company" */ './Pages/Company/Company'))
 const Engineering = lazy(() => import(/* webpackChunkName: "Engineering" */ './Pages/Engineering/Engineering'))

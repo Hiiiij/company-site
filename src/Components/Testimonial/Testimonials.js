@@ -53,7 +53,6 @@ const TestimonialsContainer = styled.div`
     padding-bottom: 58px;
     background-color: #f1f1f1;
 `
-
 function Testimonials() {
     const [currSlide, setCurrSlide] = useState(0);
 
@@ -67,18 +66,12 @@ function Testimonials() {
                 naturalSlideWidth={600}
                 naturalSlideHeight={400}
             >
-                {/* <TestimonialsFooter  /> */}
+               
                 <Slider>
                     {TestimonialText.map(({ imgSrc, title, paragraph }, index) => (
                         <Slide key={index}
                             style={{
-                                // margin: '0 20px !important',
-                                // transform: (index === currSlide && 'translateX(-30%)') ||
-                                //     (index === currSlide + 2 && 'translateX(30%)'),
-                                // transform: 'translateX(5%)',
-                                // padding: '0 21px 0 36px',
-
-                            }}>
+                                }}>
                             <Card img={imgSrc} title={title} paragraph={paragraph} />
                         </Slide>
                     ))}
@@ -99,6 +92,4 @@ function Testimonials() {
 
     );
 }
-
-
 export default Testimonials;

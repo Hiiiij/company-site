@@ -29,10 +29,9 @@ const StyledLink = styled(Link)`
 
 const Header = () => {
     const location = useLocation()
-    // '/projeccts'
-    /* hook that updates the location variable when window.location / navigation changes, typically via click but could be anything else */
+/* hook that updates the location variable when window.location / navigation changes, typically via click but could be anything else */
 
-    const compareCurrentPathWith = (path) => {
+const compareCurrentPathWith = (path) => {
         return path === location.pathname
     }
 

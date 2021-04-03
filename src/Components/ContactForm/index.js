@@ -9,7 +9,7 @@ export const contactFormUtils = () => {
 export const ContactForm = () => {
   const { register, handleSubmit, watch, errors } = useForm();
   const onSubmit = data => {
-    // TODO: Replace form with success message
+    
     console.log(data)
 
     setAsSent(true);

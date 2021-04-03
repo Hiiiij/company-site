@@ -89,7 +89,6 @@ const Footer = () => {
                         </FooterLinks>
                     </div>
                 </FooterRight>
-
             </TopFooter>
             <hr />
             <BottomFooter>
@@ -97,7 +96,6 @@ const Footer = () => {
                 <SocialLinks>
                     <SocialIcons><img src={Facebook} /></SocialIcons>
                     <SocialIcons><img src={Instagram} /></SocialIcons>
-                    {/* <SocialIcons><img src={Xing} /></SocialIcons> */}
                     <SocialIcons><img src={Linkedin} /></SocialIcons>
                 </SocialLinks>
             </BottomFooter>
