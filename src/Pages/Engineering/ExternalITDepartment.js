@@ -1,6 +1,6 @@
 import { ContactForm } from "../../Components/ContactForm";
 import MainPic from "../../Assets/Engineering/MainPic.svg"
-import CardSection from '../../Components/CardSection';
+import CardSection from '../../Components/CardSection/CardSection';
 import Testimonials from '../../Components/Testimonial/Testimonials.js'
 import { HeroCard } from "../../Components/HeroCard/HeroCard";
 import { H1Text } from "../../Components/HeroCard/style";

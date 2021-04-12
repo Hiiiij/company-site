@@ -3,7 +3,7 @@ import React from 'react';
 import cardData from '../../dummydata/engineeringCardSection';
 import Testimonials from '../../Components/Testimonial/Testimonials';
 import { ContactForm } from '../../Components/ContactForm';
-import CardSection from '../../Components/CardSection';
+import CardSection from '../../Components/CardSection/CardSection';
 import { HeroCard } from "../../Components/HeroCard/HeroCard";
 import { H1Text } from "../../Components/HeroCard/style";
 import Wave from '../../Assets/Engineering/wave.svg'

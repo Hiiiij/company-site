@@ -1,8 +1,7 @@
 import styled from '@emotion/styled'
 
 export const ContainerWithLayoutMargin = styled.div`
-  margin: 0 auto;
-  max-width: 1500px;
+  margin: 0 var(--layout-margin);
 `
 
 export const ContainerWithLayoutPadding = styled.div`

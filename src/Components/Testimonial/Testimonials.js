@@ -8,6 +8,7 @@ import TestimonialImg from "../../Assets/testimonial.jpg"
 import "./Testimonial.css"
 import Arrow_left from "../../Assets/arrow_left.svg";
 import Arrow_right from "../../Assets/arrow_right.svg";
+import { ContainerWithLayoutMargin} from '../StyledComponents';
 
 const TestimonialsFooter = styled.div`
     display: flex;
@@ -51,13 +52,16 @@ const TestimonialsContainer = styled.div`
     text-align: center;
     padding-top: 72px;
     padding-bottom: 58px;
-    background-color: #f1f1f1;
+    background-color: #F1F1F1;
+    
 `
 function Testimonials() {
     const [currSlide, setCurrSlide] = useState(0);
 
     return (
+       
         <TestimonialsContainer>
+            <ContainerWithLayoutMargin>
             <h1>Testimonials</h1>
             <CarouselProvider
                 visibleSlides={3}
@@ -86,9 +90,10 @@ function Testimonials() {
 
 
             </CarouselProvider>
+            </ContainerWithLayoutMargin>
 
-
-        </TestimonialsContainer>
+            </TestimonialsContainer>
+       
 
     );
 }

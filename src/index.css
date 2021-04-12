@@ -8,12 +8,19 @@
   --layout-margin: 5rem;
   --primary-color: #ff0000;
   --grey-text: #808080;
-
-
 }
 
 html {
   font-size: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0px;
+  padding: 0px;
 }
 
 body {
@@ -34,12 +41,11 @@ code {
   width: 100vw;
   overflow-x: hidden;
   overflow-y: auto;
-
 }
 
 .sub-txt {
   font-size: 22px;
-  color:var(--grey-text);
+  color: var(--grey-text);
   font-weight: 400;
   line-height: 28.91px;
 }
@@ -48,36 +54,43 @@ code {
   color: var(--primary-color);
 }
 
-h1,
-h2,
-h3,
-p {
-  margin: 0px;
-  padding: 0px;
-}
-
- h1 {
+h1 {
   font-weight: 700;
-  font-size: 4rem;
+  font-size: 3.8rem;
   line-height: 76px;
-} 
+}
 
 h2 {
   font-weight: 700;
   font-size: 3rem;
   line-height: 59px;
+  margin-top: 50px;
 }
 
 h3 {
+  font-size: 2rem;
+  line-height: 39px;
+  margin-bottom: 31px;
+}
+
+h3.bold {
   font-weight: 700;
-  font-size: 22px;
-  line-height: 27px;
 }
 
 p {
   font-size: 22px;
   line-height: 28px;
   color: #808080;
+}
+
+h4 {
+  font-size: 22px;
+  line-height: 28px;
+}
+
+h4.bold {
+  font-size: 22px;
+  font-weight: 700;
 }
 
 a {

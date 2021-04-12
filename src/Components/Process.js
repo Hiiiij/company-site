@@ -5,7 +5,7 @@ import contract from '../Assets/recruitingPage/contract.png'
 import interviews from '../Assets/recruitingPage/interviews.png'
 import nb5 from '../Assets/recruitingPage/nb5.svg'
 import nb4 from '../Assets/recruitingPage/nb4.svg'
-import accompany from '../Assets/recruitingPage/accompany.png'
+
 import wave from '../Assets/recruitingPage/wave.svg'
 import nb1 from '../Assets/recruitingPage/nb1.svg'
 
@@ -28,7 +28,7 @@ export default function Process() {
         <h2>Conducting Interviews</h2>
         <p>A 45 minute interview is done, whereby the hard skills of the candidate are verified and the following soft skills are tested: cultural competence, out of the box thinking, communication, adaptability and empathy. Approximately 40% of the candidates at this stage pass the interviews and are presented to the company in question</p>
         <img src={nb4} alt='' />
-        <img src={accompany} alt='' />
+       
         <img src={wave} alt='' />
         <h2>Accompany Company
 Interviews with Candidates</h2>

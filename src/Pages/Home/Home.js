@@ -7,12 +7,12 @@ import introImg from "../../Assets/introImg.png";
 import robot from '../../Assets/RobotIcon.svg';
 import Projects from "./Projects"
 import { homeCardSections } from '../../dummydata/CardSectionsData';
-import CardSection from '../../Components/CardSection';
+import CardSection from '../../Components/CardSection/CardSection';
 import "./home.css"
 import { ContainerWithLayoutMargin } from '../../Components/StyledComponents'
 import { HeroCard } from '../../Components/HeroCard/HeroCard';
 import styled from '@emotion/styled'
-// import SoftwareDev from '../../Assets/Engineering/softwareDev.svg';
+
 const FlexIconsWrapper = styled.div`
 display:flex;
 width: 100%;
