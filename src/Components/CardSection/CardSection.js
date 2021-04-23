@@ -2,11 +2,11 @@ import React from 'react';
 import { ButtonPrimary } from "../../Primitives/Button/ButtonPrimary"
 import { ContainerWithLayoutMargin } from "../StyledComponents"
 import styled from '@emotion/styled';
-import nb1 from '../../Assets/recruitingPage/nb1.svg'
-import nb2 from '../../Assets/recruitingPage/nb2.svg'
-import nb3 from '../../Assets/recruitingPage/nb3.svg'
-import nb4 from '../../Assets/recruitingPage/nb4.svg'
-import nb5 from '../../Assets/recruitingPage/nb5.svg'
+import nb1 from '../../Assets/nb1.svg'
+import nb2 from '../../Assets/nb2.svg'
+import nb3 from '../../Assets/nb3.svg'
+import nb4 from '../../Assets/nb4.svg'
+import nb5 from '../../Assets/nb5.svg'
 
 const indexImgMap = [nb1, nb2, nb3, nb4, nb5];
 

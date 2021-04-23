@@ -6,4 +6,5 @@ export { default as Recruiting} from "./Recruiting"
 export { default as ExternalITDepartment} from "./ExternalITDepartment"
 export { default as SoftwareDevelopment} from "./SoftwareDevelopment"
 export { default as RPA} from "./RPA"
+
 export { default as ECommerceShop} from "./ECommerceShop"

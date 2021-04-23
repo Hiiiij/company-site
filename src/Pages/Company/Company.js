@@ -7,17 +7,20 @@ import { H1Text } from '../../Components/HeroCard/style';
 import HeroCompany from '../../Assets/Company/HeroCompany.jpg';
 import Honesty from '../../Assets/Company/Honesty.jpg';
 import Wave from '../../Assets/Company/wave.svg';
-import Number2 from '../../Assets/Company/Nb2.svg';
-import Number1 from '../../Assets/Company/Nb1.svg';
+import Number2 from '../../Assets/nb2.svg';
+import Number1 from '../../Assets/nb1.svg';
 import Dots from '../../Assets/Engineering/dotsExternalIt.svg';
 import Favicon from '../../Assets/Company/FaviconXing.svg'; import Team1 from '../../Assets/Company/Team1.jpg';
 import Team2 from '../../Assets/Company/Team2.jpg';
 import Team3 from '../../Assets/Company/Team3.jpg';
 import Team4 from '../../Assets/Company/Team4.jpg';
 import Map from '../../Assets/Company/Frame.svg';
+import { TeamGrid } from './CompanyGrid';
 
-import { TeamGrid } from './CompanyGrid'
-
+const Imgdiv = styled.div`
+display: flex;
+justify-content:center;
+`
 
 const HonestyWrapper = styled.div`
 display:flex;
@@ -31,6 +34,7 @@ justify-content:space-between;
 const ImgNb = styled.img`
 margin-right: 57px;
 margin-bottom: 200px;
+
 
 `
 const DotsContainer = styled.div`
@@ -149,14 +153,18 @@ function Company() {
 
           <SectionsDivider>
             <HonestyWrapper>
-              <ImgNb src={Number1} alt="" />
+              <Imgdiv>
+                <ImgNb src={Number1} alt="" />
+              </Imgdiv>
               <div>
                 <h3>Honesty & Responsibility</h3>
                 <p>We don’t aim to know everything. But what we do know, we know well, and use it to build trust through honesty and quality delivery.</p>
               </div>
             </HonestyWrapper>
             <HonestyWrapper>
-              <ImgNb src={Number2} alt="" />
+              <Imgdiv>
+                <ImgNb src={Number2} alt="" />
+              </Imgdiv>
               <div>
                 <h3>Technology & Simplicity</h3>
                 <p>A technological revolution shouldn’t equate to complication. We develop intuitive, self-explaining software, so that your user immediately feels the added value.</p>
