@@ -1,10 +1,10 @@
 /* eslint-disable */
-import React from "react";
-import styled from "@emotion/styled";
-import { ContainerWithLayoutPadding } from "./StyledComponents";
+import React from 'react';
+import styled from '@emotion/styled';
+import { CenterContainer } from './StyledComponents';
 
 const internalComponentStyles = {
-  display: "flex",
+  display: 'flex',
 };
 const ImgWrapper = styled.section`
   flex: 0 0 50%;
@@ -39,9 +39,7 @@ export function HeaderCard({
   );
 
   return (
-    <ContainerWithLayoutPadding
-      style={{ ...styles, ...internalComponentStyles }}
-    >
+    <CenterContainer style={{ ...styles, ...internalComponentStyles }}>
       {!isReversed && LeftSide}
       <ImgContainer>
         <ImgWrapper style={{ ...imgWrapperStyles }}>
@@ -51,6 +49,6 @@ export function HeaderCard({
       </ImgContainer>
 
       {isReversed && LeftSide}
-    </ContainerWithLayoutPadding>
+    </CenterContainer>
   );
 }

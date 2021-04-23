@@ -9,9 +9,9 @@ const fadeInOpacity = keyframes`
     }
 `;
 export const fadeIn = css`
-    opacity: 1;
-    animation-name: ${fadeInOpacity};
-    animation-iteration-count: 1;
-    animation-timing-function: ease-in;
-    animation-duration: .4s;
+  opacity: 1;
+  animation-name: ${fadeInOpacity};
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.4s;
 `;

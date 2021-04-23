@@ -1,8 +1,6 @@
-import "./button.css"
+import './button.css';
 
-const ButtonSecondary = ({children})=> {
-    return (
-        <button className="button-secondary">{children}</button>
-    )  
-}
-export default ButtonSecondary 
+const ButtonSecondary = ({ children }) => {
+  return <button className="button-secondary">{children}</button>;
+};
+export default ButtonSecondary;

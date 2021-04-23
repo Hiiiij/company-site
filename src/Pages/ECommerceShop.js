@@ -1,13 +1,9 @@
-
 function ECommerceShop() {
   return (
-   
     <div>
       <h1>ECommerceShop</h1>
-      </div>
-  
+    </div>
   );
 }
-    
-    
-export default ECommerceShop.js 
+
+export default ECommerceShop.js;

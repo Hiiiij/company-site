@@ -59,7 +59,7 @@ Projects page
 [x] create data structure array e.g. [ {imageURL: projects.jpg...., title: "Home24 Backend Engineering"}, {imageURL: projects.jpg...., title: "Home24 Backend Engineering"}]
 [x] map over data structure to render
 [x] apply grey background
-[x] constrain width of content with `ContainerWithLayoutMargin`
+[x] constrain width of content with `CenterContainer`
 
 
 

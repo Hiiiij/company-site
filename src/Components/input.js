@@ -1,7 +1,7 @@
-import "./input.css"
+import './input.css';
 
 const Input = ({ ...props }) => {
-    return (<input className="input" {...props} />)
+  return <input className="input" {...props} />;
 };
 
-export default Input
+export default Input;

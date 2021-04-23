@@ -1,18 +1,16 @@
 /* eslint-disable */
-import React from 'react'
-import styled from '@emotion/styled'
-import { jsx } from '@emotion/react'
-import { cx, } from '@emotion/css'
-import { ContainerWithLayoutPadding } from '../StyledComponents';
+import React from 'react';
+import styled from '@emotion/styled';
+import { jsx } from '@emotion/react';
+import { cx } from '@emotion/css';
+import { CenterContainer } from '../StyledComponents';
 
 const InternalComponentStyles = styled.div`
-    display: flex;
-    padding-top: 60px;
-    width: 100%;
-    padding-bottom: 6.25rem;
+  display: flex;
+  padding-top: 60px;
+  width: 100%;
+  padding-bottom: 6.25rem;
 `;
-
-
 
 const ImgWrapper = styled.section`
   flex: 0 0 50%;
@@ -21,14 +19,14 @@ const ImgWrapper = styled.section`
   display: flex;
   background: white;
   min-height: 300px;
-  border: ${props => props.noBorder ? 'none' : '12px solid #f1f1f1'};
+  border: ${(props) => (props.noBorder ? 'none' : '12px solid #f1f1f1')};
   justify-content: flex-end;
   flex-direction: column;
 `;
 
 const TemplateImg = styled.img`
-  height: ${props => props.noBorder ? 'auto' : '110px'};
-`
+  height: ${(props) => (props.noBorder ? 'auto' : '110px')};
+`;
 
 const ImgContainer = styled.div`
   padding-left: 1rem;
@@ -48,17 +46,17 @@ export function HeroCard({
   img,
   styles,
   imgWrapperStyles,
-  children
+  children,
 }) {
   return (
     <InternalComponentStyles>
       <TextWrapper>
-        <div>
-          {renderHeader && renderHeader()}
-        </div>
+        <div>{renderHeader && renderHeader()}</div>
         <div>
           <p>{description}</p>
-          <div style={{ marginTop: '30px' }}>{renderLeftSideExtras && renderLeftSideExtras()}</div>
+          <div style={{ marginTop: '30px' }}>
+            {renderLeftSideExtras && renderLeftSideExtras()}
+          </div>
         </div>
       </TextWrapper>
       <ImgContainer>

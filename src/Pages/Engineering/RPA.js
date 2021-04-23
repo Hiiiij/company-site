@@ -6,5 +6,4 @@ function RPA() {
   );
 }
 
-
 export default RPA;
