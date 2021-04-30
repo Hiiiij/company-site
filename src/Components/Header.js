@@ -71,11 +71,18 @@ const StyledDropDownUl = styled.div`
 `;
 const StyledLi = styled.li`
   margin-right: 20px;
+margin-left: 20px;
+margin-top: 1.2em;
+margin-bottom: 1.2em;
+@media (min-width: 1200px) {
+    margin-left: 0;
+margin-top: 0;
+  }
 `;
 
 const Indicator = styled(DropdownArrow)`
   transition: transform 0.2s;
-  transform: ${(props) => (props.isOpen ? 'rotate(0deg)' : 'rotate(180deg)')};
+  transform: ${(props) => (props.isOpen ? 'rotate(180deg)' : 'rotate(0deg)')};
 `;
 
 const StyledSubLink = styled(Link)`
@@ -101,6 +108,26 @@ const StyledLink = styled(Link)`
   }
 `;
 
+const MobileEngineeringMenu = styled.ul`
+list-style: none;
+display: block;
+margin: 0;
+padding: 0;
+border: 1px red solid;
+@media (min-width: 1200px) {
+    display: none;
+  }
+`
+const MobileTopMenu = styled.ul`
+list-style: none;
+display: block;
+margin: 0;
+padding: 0;
+@media (min-width: 1200px) {
+    display: none;
+  }
+`
+
 const TopMenu = ({ handleCloseMainMenu, compareCurrentPathWith, toggleSubMenu }) => (
   <>
     <StyledLi>
@@ -120,10 +147,9 @@ const TopMenu = ({ handleCloseMainMenu, compareCurrentPathWith, toggleSubMenu })
     </StyledLi>
     <StyledLi>
       <StyledLink
-        isActiveRoute={setIsOpen}
         onClick={toggleSubMenu}
       >
-        Engineering <Indicator isOpen={setIsOpen} />
+        Engineering
       </StyledLink>
     </StyledLi>
     <StyledLi>
@@ -147,48 +173,47 @@ const TopMenu = ({ handleCloseMainMenu, compareCurrentPathWith, toggleSubMenu })
   </>
 );
 
-const SubMenu = ({ setIsOpen, compareCurrentPathWith }) => (
+const SubMenu = ({ handleCloseSubMenu, compareCurrentPathWith }) => (
   <>
     <StyledLi>
-      <StyledSubLink
-        onClick={() => setIsOpen(false)}
+      <StyledLink
+        onClick={handleCloseSubMenu}
         isActiveRoute={compareCurrentPathWith(
           '/engineering/externalITDepartment'
         )}
         to="/engineering/externalITDepartment"
       >
         External IT Department
-      </StyledSubLink>
+      </StyledLink>
     </StyledLi>
     <StyledLi>
-      {' '}
-      <StyledSubLink
-        onClick={() => setIsOpen(false)}
+      <StyledLink
+        onClick={handleCloseSubMenu}
         isActiveRoute={compareCurrentPathWith('/engineering/rpa')}
         to="/engineering/rpa"
       >
-        RPA and AI{' '}
-      </StyledSubLink>
+        RPA and AI
+      </StyledLink>
     </StyledLi>
     <StyledLi>
-      <StyledSubLink
-        onClick={() => setIsOpen(false)}
+      <StyledLink
+        onClick={handleCloseSubMenu}
         isActiveRoute={compareCurrentPathWith('/engineering/ECommerceShop')}
         to="/engineering/ECommerceShop"
       >
-        eCommerce Shop Implementation{' '}
-      </StyledSubLink>
+        eCommerce Shop Implementation
+      </StyledLink>
     </StyledLi>
     <StyledLi>
-      <StyledSubLink
-        onClick={() => setIsOpen(false)}
+      <StyledLink
+        onClick={handleCloseSubMenu}
         isActiveRoute={compareCurrentPathWith(
           '/engineering/SoftwareDevelopment'
         )}
         to="/engineering/SoftwareDevelopment"
       >
-        Software Development{' '}
-      </StyledSubLink>
+        Software Development
+      </StyledLink>
     </StyledLi>
   </>
 );
@@ -227,15 +252,16 @@ const Header = () => {
           </StyledLi>
           <StyledLi>
             <StyledLink
-              isActiveRoute={isOpen}
-              onClick={() => setIsOpen(!isOpen)}
+              isActiveRoute={isSubMenuOpen}
+              onClick={() => setIsSubMenuOpen(!isSubMenuOpen)}
             >
-              Engineering <Indicator isOpen={isOpen} />
+              Engineering <Indicator isOpen={isSubMenuOpen} />
+              
             </StyledLink>
-            {isOpen && (
+            {isSubMenuOpen && (
               <StyledDropDownUl>
                 <SubMenu
-                  setIsOpen={setIsOpen}
+                  handleCloseSubMenu={() => setIsSubMenuOpen(false)}
                   compareCurrentPathWith={compareCurrentPathWith}
                 />
               </StyledDropDownUl>
@@ -246,7 +272,7 @@ const Header = () => {
               to="/recruiting"
               isActiveRoute={compareCurrentPathWith('/recruiting')}
             >
-              {' '}
+              
               Recruiting
             </StyledLink>
           </StyledLi>
@@ -265,33 +291,31 @@ const Header = () => {
         </MobileMenuButton>
       </StyledHeader>
       {isMainMenuOpen && (
-        <>
-        <ul>
+        <MobileTopMenu>
           <TopMenu
             handleCloseMainMenu={() => setIsMainMenuOpen(false)}
             compareCurrentPathWith={compareCurrentPathWith}
             toggleSubMenu={() => setIsSubMenuOpen(!isSubMenuOpen)}
           />
           <StyledLi>
-            <StyledSubLink onClick={() => setIsMobileOpen(false)}>
+            <StyledSubLink onClick={() => setIsMainMenuOpen(false)}>
               Contact
             </StyledSubLink>
           </StyledLi>
-          </ul>)}
+          </MobileTopMenu>
+          )}
 
-          {isSubMenuOpen && (<ul>
+          {isSubMenuOpen && (<MobileEngineeringMenu>
             <SubMenu
-              setIsOpen={setIsMobileOpen}
+              setIsOpen={setIsMainMenuOpen}
               compareCurrentPathWith={compareCurrentPathWith}
             />
             <StyledLi>
-              <StyledSubLink onClick={() => setIsMobileOpen(false)}>
+              <StyledSubLink onClick={() => setIsMainMenuOpen(false)}>
                 Contact
               </StyledSubLink>
             </StyledLi>
-          </ul>)}
-        </>
-      )}
+          </MobileEngineeringMenu>)}
     </CenterContainer>
   );
 };
