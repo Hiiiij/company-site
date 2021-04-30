@@ -76,13 +76,20 @@ margin-top: 1.2em;
 margin-bottom: 1.2em;
 @media (min-width: 1200px) {
     margin-left: 0;
-margin-top: 0;
   }
 `;
 
 const Indicator = styled(DropdownArrow)`
   transition: transform 0.2s;
   transform: ${(props) => (props.isOpen ? 'rotate(180deg)' : 'rotate(0deg)')};
+`;
+
+const ForwardIndicator = styled(DropdownArrow)`
+  transform: rotate(270deg);
+`;
+
+const BackIndicator = styled(DropdownArrow)`
+  transform: rotate(90deg);
 `;
 
 const StyledSubLink = styled(Link)`
@@ -114,6 +121,7 @@ display: block;
 margin: 0;
 padding: 0;
 border: 1px red solid;
+width: 100vw;
 @media (min-width: 1200px) {
     display: none;
   }
@@ -123,16 +131,29 @@ list-style: none;
 display: block;
 margin: 0;
 padding: 0;
+width: 100vw;
 @media (min-width: 1200px) {
     display: none;
   }
+`
+
+const MobileMenuWindow = styled.div`
+width: 100vw;
+overflow: hidden;
+`
+
+const MobileMenuContainer = styled.div`
+width: 200vw;
+display: flex;
+transition: transform 0.2s;
+transform: ${(props) => (props.isSubMenuOpen ? 'translateX(-100vw)' : 'translateX(0)')};
 `
 
 const TopMenu = ({ handleCloseMainMenu, compareCurrentPathWith, toggleSubMenu }) => (
   <>
     <StyledLi>
       <StyledLink to="/" isActiveRoute={compareCurrentPathWith('/')}
-      onClick={handleCloseMainMenu}>
+        onClick={handleCloseMainMenu}>
         Home
       </StyledLink>
     </StyledLi>
@@ -149,7 +170,7 @@ const TopMenu = ({ handleCloseMainMenu, compareCurrentPathWith, toggleSubMenu })
       <StyledLink
         onClick={toggleSubMenu}
       >
-        Engineering
+        Engineering <ForwardIndicator />
       </StyledLink>
     </StyledLi>
     <StyledLi>
@@ -256,7 +277,7 @@ const Header = () => {
               onClick={() => setIsSubMenuOpen(!isSubMenuOpen)}
             >
               Engineering <Indicator isOpen={isSubMenuOpen} />
-              
+
             </StyledLink>
             {isSubMenuOpen && (
               <StyledDropDownUl>
@@ -272,7 +293,7 @@ const Header = () => {
               to="/recruiting"
               isActiveRoute={compareCurrentPathWith('/recruiting')}
             >
-              
+
               Recruiting
             </StyledLink>
           </StyledLi>
@@ -291,31 +312,44 @@ const Header = () => {
         </MobileMenuButton>
       </StyledHeader>
       {isMainMenuOpen && (
-        <MobileTopMenu>
-          <TopMenu
-            handleCloseMainMenu={() => setIsMainMenuOpen(false)}
-            compareCurrentPathWith={compareCurrentPathWith}
-            toggleSubMenu={() => setIsSubMenuOpen(!isSubMenuOpen)}
-          />
-          <StyledLi>
-            <StyledSubLink onClick={() => setIsMainMenuOpen(false)}>
-              Contact
-            </StyledSubLink>
-          </StyledLi>
-          </MobileTopMenu>
-          )}
+        <MobileMenuWindow>
+          <MobileMenuContainer isSubMenuOpen={isSubMenuOpen}>
 
-          {isSubMenuOpen && (<MobileEngineeringMenu>
-            <SubMenu
-              setIsOpen={setIsMainMenuOpen}
-              compareCurrentPathWith={compareCurrentPathWith}
-            />
-            <StyledLi>
-              <StyledSubLink onClick={() => setIsMainMenuOpen(false)}>
-                Contact
+            <>
+              <MobileTopMenu>
+                <TopMenu
+                  handleCloseMainMenu={() => setIsMainMenuOpen(false)}
+                  compareCurrentPathWith={compareCurrentPathWith}
+                  toggleSubMenu={() => setIsSubMenuOpen(!isSubMenuOpen)}
+                />
+                <StyledLi>
+                  <StyledSubLink onClick={() => setIsMainMenuOpen(false)}>
+                    Contact
+            </StyledSubLink>
+                </StyledLi>
+              </MobileTopMenu>
+              <MobileEngineeringMenu>
+                <StyledLi>
+                  <StyledLink onClick={() => setIsSubMenuOpen(false)} ><BackIndicator /> Back to Main Menu</StyledLink>
+                </StyledLi>
+                <SubMenu
+                  handleCloseSubMenu={() => setIsMainMenuOpen(false)}
+                  compareCurrentPathWith={compareCurrentPathWith}
+                />
+                <StyledLi>
+                  <StyledSubLink onClick={() => setIsMainMenuOpen(false)}>
+                    Contact
               </StyledSubLink>
-            </StyledLi>
-          </MobileEngineeringMenu>)}
+                </StyledLi>
+              </MobileEngineeringMenu></>
+
+
+
+          </MobileMenuContainer>
+
+        </MobileMenuWindow>
+      )}
+
     </CenterContainer>
   );
 };
